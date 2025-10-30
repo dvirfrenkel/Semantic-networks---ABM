@@ -11,7 +11,7 @@ function differences(A::AbstractArray{Float32, 3}; sums=nothing)::Matrix{Float64
     Calculates the Total Variation Distance (TVD), or Normalized Manhattan Distance, 
     between all pairs of semantic networks stored in the 3D array 'A'. 
     The calculation is performed in parallel.
-    The formula computed is 0.5 * sum(|A_i/sum(A_i) - A_j/sum(A_j)|), where A_i is a slice of A.
+    The formula computed is 0.5 * sum(|A_i_j/sum(A) - B_i_j/sum(B)|).
     
     # Arguments
     - `A`: A 3D array (n x n x num_participants) containing the semantic networks.
